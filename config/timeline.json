@@ -13,10 +13,13 @@
         "outlook-credentials-file": "C:\\ghosts-client-x64-v8.0.0\\config\\owa-credentials.json",
         "outlook-credential-key": "owa01",
         "outlook-url": "https://mail.cybergridpower.com/owa",
-        "exchange-version": "2013",
+        "exchange-version": "2019",
         "outlook-email-domain-addresses": [
+          "T.david@cybergridpower.com",
+          "A.Robert@cybergridpower.com",
+          "C.michael@cybergridpower.com",
           "w.sara@cybergridpower.com",
-          "T.david@cybergridpower.com"
+          "M.jennifer@cybergridpower.com"
         ],
         "outlook-delete-probability": 15,
         "outlook-read-probability": 45,
