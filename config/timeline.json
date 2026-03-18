@@ -16,11 +16,11 @@
         "outlook-url": "https://mail.cybergridpower.com/owa",
         "exchange-version": "2019",
         "outlook-email-domain-addresses": [
-          "T.david@cybergridpower.com",
-          "A.Robert@cybergridpower.com",
-          "C.michael@cybergridpower.com",
-          "w.sara@cybergridpower.com",
-          "M.jennifer@cybergridpower.com"
+          "a.robert@cybergridpower.com",
+          "c.michael@cybergridpower.com",
+          "m.jennifer@cybergridpower.com",
+          "t.david@cybergridpower.com",
+          "w.sara@cybergridpower.com"
         ],
         "outlook-delete-probability": 15,
         "outlook-read-probability": 45,
@@ -41,7 +41,7 @@
         {
           "Command": "outlook",
           "CommandArgs": [
-            "CurrentUser",
+            "a.robert@cybergridpower.com",
             "random",
             "random",
             "random",
@@ -187,9 +187,12 @@
         {
           "Command": "if not exist %USERPROFILE%\\Desktop\\WorkSandbox mkdir %USERPROFILE%\\Desktop\\WorkSandbox",
           "CommandArgs": [
-            "if not exist %USERPROFILE%\\Desktop\\WorkSandbox\\drafts mkdir %USERPROFILE%\\Desktop\\WorkSandbox\\drafts",
-            "if not exist %USERPROFILE%\\Desktop\\WorkSandbox\\reports mkdir %USERPROFILE%\\Desktop\\WorkSandbox\\reports",
-            "if not exist %USERPROFILE%\\Desktop\\WorkSandbox\\archive mkdir %USERPROFILE%\\Desktop\\WorkSandbox\\archive"
+            "if not exist %USERPROFILE%\\Desktop\\WorkSandbox\\intel mkdir %USERPROFILE%\\Desktop\\WorkSandbox\\intel",
+            "if not exist %USERPROFILE%\\Desktop\\WorkSandbox\\ir mkdir %USERPROFILE%\\Desktop\\WorkSandbox\\ir",
+            "if not exist %USERPROFILE%\\Desktop\\WorkSandbox\\tickets mkdir %USERPROFILE%\\Desktop\\WorkSandbox\\tickets",
+            "if not exist %USERPROFILE%\\Desktop\\WorkSandbox\\playbooks mkdir %USERPROFILE%\\Desktop\\WorkSandbox\\playbooks",
+            "if not exist %USERPROFILE%\\Desktop\\WorkSandbox\\archive mkdir %USERPROFILE%\\Desktop\\WorkSandbox\\archive",
+            "if not exist \"%USERPROFILE%\\Desktop\\WorkSandbox\\intel\\baseline_note.txt\" echo SOC baseline checklist created %date% %time% > \"%USERPROFILE%\\Desktop\\WorkSandbox\\intel\\baseline_note.txt\""
           ],
           "DelayAfter": 3000,
           "DelayBefore": 0
@@ -198,25 +201,23 @@
           "Command": "random",
           "CommandArgs": [
             "dir %USERPROFILE%\\Desktop\\WorkSandbox",
-            "dir %USERPROFILE%\\Desktop\\WorkSandbox\\reports",
-            "dir %USERPROFILE%\\Desktop\\WorkSandbox\\drafts",
+            "dir %USERPROFILE%\\Desktop\\WorkSandbox\\intel",
+            "dir %USERPROFILE%\\Desktop\\WorkSandbox\\ir",
+            "dir %USERPROFILE%\\Desktop\\WorkSandbox\\tickets",
+            "dir %USERPROFILE%\\Desktop\\WorkSandbox\\playbooks",
             "dir %USERPROFILE%\\Desktop\\WorkSandbox\\archive",
-            "dir %USERPROFILE%\\Desktop\\WorkSandbox",
-            "echo Report generated on %date% %time% > \"%USERPROFILE%\\Desktop\\WorkSandbox\\drafts\\report_%RANDOM%.txt\"",
-            "echo Report generated on %date% %time% > \"%USERPROFILE%\\Desktop\\WorkSandbox\\drafts\\report_%RANDOM%.txt\"",
-            "echo Meeting notes %date% %time% > \"%USERPROFILE%\\Desktop\\WorkSandbox\\drafts\\notes_%RANDOM%.txt\"",
-            "echo Analysis summary %date% > \"%USERPROFILE%\\Desktop\\WorkSandbox\\reports\\analysis_%RANDOM%.txt\"",
-            "xcopy /Y /I \"%USERPROFILE%\\Desktop\\WorkSandbox\\drafts\\*.txt\" \"%USERPROFILE%\\Desktop\\WorkSandbox\\reports\\\"",
-            "xcopy /Y /I \"%USERPROFILE%\\Desktop\\WorkSandbox\\drafts\\*.txt\" \"%USERPROFILE%\\Desktop\\WorkSandbox\\archive\\\"",
-            "copy /Y \"%USERPROFILE%\\Desktop\\WorkSandbox\\reports\\*.txt\" \"%USERPROFILE%\\Desktop\\WorkSandbox\\archive\\\"",
-            "move /Y \"%USERPROFILE%\\Desktop\\WorkSandbox\\drafts\\*.txt\" \"%USERPROFILE%\\Desktop\\WorkSandbox\\reports\\\"",
-            "dir %USERPROFILE%\\Desktop\\WorkSandbox",
-            "dir %USERPROFILE%\\Desktop\\WorkSandbox\\reports",
-            "dir %USERPROFILE%\\Desktop\\WorkSandbox",
-            "dir %USERPROFILE%\\Desktop\\WorkSandbox\\drafts",
+            "(echo SOC Daily Brief %date% %time%&echo Top Alert: Failed VPN bursts from external network&echo Priority Host: WS-12 suspicious parent child process chain&echo Action: Validate MFA logs and confirm firewall blocks) > \"%USERPROFILE%\\Desktop\\WorkSandbox\\intel\\soc_daily_brief_%RANDOM%.txt\"",
+            "(echo Incident Ticket IR-%RANDOM%&echo Severity: High&echo Detection: Encoded PowerShell observed by EDR&echo Scope: 1 endpoint and 2 user accounts&echo Next Step: Isolate endpoint and collect triage bundle) > \"%USERPROFILE%\\Desktop\\WorkSandbox\\tickets\\ir_ticket_%RANDOM%.txt\"",
+            "(echo IOC Watchlist Updated %date% %time%&echo IP: 185.199.108.153&echo Domain: update-security-check[.]com&echo Hash: 8f14e45fceea167a5a36dedd4bea2543&echo Source: Internal threat intel feed) > \"%USERPROFILE%\\Desktop\\WorkSandbox\\intel\\ioc_watch_%RANDOM%.txt\"",
+            "(echo SIEM Query Notes %date%&echo Query: EventID 4625 and LogonType 3 or 10&echo Objective: Find brute force and password spray patterns&echo Result: 27 failed attempts from 10.20.15.44) > \"%USERPROFILE%\\Desktop\\WorkSandbox\\ir\\siem_query_notes_%RANDOM%.txt\"",
+            "(echo Playbook Checklist - Ransomware Triage&echo 1. Confirm endpoint isolation&echo 2. Disable impacted credentials&echo 3. Capture volatile evidence&echo 4. Notify IR lead and SOC manager) > \"%USERPROFILE%\\Desktop\\WorkSandbox\\playbooks\\ransomware_triage_%RANDOM%.txt\"",
+            "(echo Vulnerability Review %date%&echo Asset: APP-SRV-03&echo Finding: CVE-2024-3400 patch missing&echo Risk: External access path present&echo Owner: Infra Ops Team) > \"%USERPROFILE%\\Desktop\\WorkSandbox\\tickets\\vuln_review_%RANDOM%.txt\"",
+            "(echo Firewall Change Record %date% %time%&echo Rule: Block outbound TCP 4444&echo Reason: Suspected C2 beacon traffic&echo Requested By: SOC-L2) > \"%USERPROFILE%\\Desktop\\WorkSandbox\\ir\\firewall_change_%RANDOM%.txt\"",
+            "xcopy /Y /I \"%USERPROFILE%\\Desktop\\WorkSandbox\\intel\\*.txt\" \"%USERPROFILE%\\Desktop\\WorkSandbox\\archive\\\"",
+            "copy /Y \"%USERPROFILE%\\Desktop\\WorkSandbox\\tickets\\*.txt\" \"%USERPROFILE%\\Desktop\\WorkSandbox\\archive\\\"",
+            "copy /Y \"%USERPROFILE%\\Desktop\\WorkSandbox\\ir\\*.txt\" \"%USERPROFILE%\\Desktop\\WorkSandbox\\archive\\\"",
             "echo Activity log entry %date% %time% >> \"%USERPROFILE%\\Desktop\\WorkSandbox\\activity.log\"",
-            "del /Q \"%USERPROFILE%\\Desktop\\WorkSandbox\\archive\\*.txt\"",
-            "del /Q \"%USERPROFILE%\\Desktop\\WorkSandbox\\reports\\*.txt\""
+            "forfiles /P \"%USERPROFILE%\\Desktop\\WorkSandbox\\archive\" /M *.txt /D -2 /C \"cmd /c del /q @path\""
           ],
           "DelayAfter": { "random": true, "min": 35000, "max": 120000 },
           "DelayBefore": 5000
@@ -231,13 +232,13 @@
       "UtcTimeOn": "00:00:00",
       "UtcTimeOff": "00:00:00",
       "HandlerArgs": {
-        "execution-probability": 90,
-        "creation-probability": 44,
-        "modification-probability": 30,
-        "view-probability": 19,
-        "deletion-probability": 7,
-        "input-directory": "%USERPROFILE%\\Desktop\\WorkSandbox\\drafts",
-        "output-directory": "%USERPROFILE%\\Desktop\\WorkSandbox\\drafts",
+        "execution-probability": 80,
+        "creation-probability": 0,
+        "modification-probability": 0,
+        "view-probability": 100,
+        "deletion-probability": 0,
+        "input-directory": "%USERPROFILE%\\Desktop\\WorkSandbox\\intel",
+        "output-directory": "%USERPROFILE%\\Desktop\\WorkSandbox\\intel",
         "text-generation": "random",
         "min-paragraphs": 2,
         "max-paragraphs": 8,
@@ -246,10 +247,10 @@
       "Loop": true,
       "TimeLineEvents": [
         {
-          "Command": "random",
+          "Command": "noop",
           "CommandArgs": [],
           "DelayAfter": { "random": true, "min": 60000, "max": 180000 },
-          "DelayBefore": 8000
+          "DelayBefore": 45000
         }
       ],
       "ScheduleType": "Other"
