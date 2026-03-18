@@ -2,6 +2,7 @@
   "Id": "10216615-969e-488a-8f74-952eca782121",
   "Status": "Run",
   "TimeLineHandlers": [
+
     {
       "HandlerType": "BrowserFirefox",
       "Initial": "about:blank",
@@ -54,6 +55,205 @@
         }
       ],
       "ScheduleType": "Other"
+    },
+
+    {
+      "HandlerType": "BrowserFirefox",
+      "Initial": "about:blank",
+      "UtcTimeOn": "00:00:00",
+      "UtcTimeOff": "00:00:00",
+      "HandlerArgs": {
+        "isheadless": "false",
+        "delay-jitter": 40,
+        "stickiness": 65,
+        "stickiness-depth-min": 2,
+        "stickiness-depth-max": 7,
+        "visited-remember": 8,
+        "javascript-enable": "true",
+        "command-line-args": [
+          "--ignore-certificate-errors"
+        ],
+        "url-replace": [
+          {
+            "query": [
+              "cybersecurity+threat+intelligence",
+              "network+intrusion+detection",
+              "vulnerability+management+tools",
+              "endpoint+detection+and+response",
+              "SIEM+log+analysis",
+              "zero+trust+security+architecture",
+              "incident+response+playbook",
+              "Active+Directory+security+hardening",
+              "PowerShell+scripting+automation",
+              "firewall+rule+best+practices",
+              "NIST+cybersecurity+framework",
+              "SOC+analyst+workflow",
+              "python+security+tools",
+              "Windows+Server+administration",
+              "network+traffic+analysis",
+              "penetration+testing+tools",
+              "security+log+management",
+              "malware+analysis+techniques",
+              "cloud+security+best+practices",
+              "DevSecOps+practices"
+            ]
+          }
+        ]
+      },
+      "Loop": true,
+      "TimeLineEvents": [
+        {
+          "Command": "browse",
+          "CommandArgs": [
+            "https://duckduckgo.com/?q=cybersecurity+news+today"
+          ],
+          "DelayAfter": 5000,
+          "DelayBefore": 3000
+        },
+        {
+          "Command": "browse",
+          "CommandArgs": [
+            "https://duckduckgo.com"
+          ],
+          "DelayAfter": 2000,
+          "DelayBefore": 2000
+        },
+        {
+          "Command": "type",
+          "CommandArgs": [
+            "q",
+            "enterprise cybersecurity threat intelligence"
+          ],
+          "DelayAfter": 1500,
+          "DelayBefore": 0
+        },
+        {
+          "Command": "js.executescript",
+          "CommandArgs": [
+            "var f=document.querySelector('form'); if(f){f.submit();}"
+          ],
+          "DelayAfter": 6000,
+          "DelayBefore": 0
+        },
+        {
+          "Command": "random",
+          "CommandArgs": [
+            "https://krebsonsecurity.com",
+            "https://www.bleepingcomputer.com",
+            "https://thehackernews.com",
+            "https://www.cisa.gov/news-events/cybersecurity-advisories",
+            "https://nvd.nist.gov/vuln/search",
+            "https://owasp.org/www-community/vulnerabilities",
+            "https://www.sans.org/blog",
+            "https://www.darkreading.com",
+            "https://www.securityweek.com",
+            "https://github.com/topics/security",
+            "https://github.com/topics/cybersecurity",
+            "https://stackoverflow.com/questions/tagged/security",
+            "https://stackoverflow.com/questions/tagged/python",
+            "https://docs.microsoft.com/en-us/security",
+            "https://developer.mozilla.org/en-US/docs/Web/Security",
+            "https://news.ycombinator.com",
+            "https://arstechnica.com/security",
+            "https://www.theregister.com/security",
+            "https://www.wired.com/category/security",
+            "https://techcrunch.com/category/security",
+            "https://www.reuters.com/technology",
+            "https://www.reddit.com/r/netsec",
+            "https://www.reddit.com/r/sysadmin",
+            "https://duckduckgo.com/?q={query}",
+            "https://duckduckgo.com/?q={query}",
+            "https://github.com/search?q={query}",
+            "https://stackoverflow.com/search?q={query}"
+          ],
+          "DelayAfter": { "random": true, "min": 25000, "max": 80000 },
+          "DelayBefore": 3000
+        }
+      ],
+      "ScheduleType": "Other"
+    },
+
+    {
+      "HandlerType": "Command",
+      "Initial": "",
+      "UtcTimeOn": "00:00:00",
+      "UtcTimeOff": "00:00:00",
+      "HandlerArgs": {
+        "execution-probability": 85,
+        "delay-jitter": 40
+      },
+      "Loop": true,
+      "TimeLineEvents": [
+        {
+          "Command": "if not exist %USERPROFILE%\\Desktop\\WorkSandbox mkdir %USERPROFILE%\\Desktop\\WorkSandbox",
+          "CommandArgs": [
+            "if not exist %USERPROFILE%\\Desktop\\WorkSandbox\\drafts mkdir %USERPROFILE%\\Desktop\\WorkSandbox\\drafts",
+            "if not exist %USERPROFILE%\\Desktop\\WorkSandbox\\reports mkdir %USERPROFILE%\\Desktop\\WorkSandbox\\reports",
+            "if not exist %USERPROFILE%\\Desktop\\WorkSandbox\\archive mkdir %USERPROFILE%\\Desktop\\WorkSandbox\\archive"
+          ],
+          "DelayAfter": 3000,
+          "DelayBefore": 0
+        },
+        {
+          "Command": "random",
+          "CommandArgs": [
+            "dir %USERPROFILE%\\Desktop\\WorkSandbox",
+            "dir %USERPROFILE%\\Desktop\\WorkSandbox\\reports",
+            "dir %USERPROFILE%\\Desktop\\WorkSandbox\\drafts",
+            "dir %USERPROFILE%\\Desktop\\WorkSandbox\\archive",
+            "dir %USERPROFILE%\\Desktop\\WorkSandbox",
+            "echo Report generated on %date% %time% > \"%USERPROFILE%\\Desktop\\WorkSandbox\\drafts\\report_%RANDOM%.txt\"",
+            "echo Report generated on %date% %time% > \"%USERPROFILE%\\Desktop\\WorkSandbox\\drafts\\report_%RANDOM%.txt\"",
+            "echo Meeting notes %date% %time% > \"%USERPROFILE%\\Desktop\\WorkSandbox\\drafts\\notes_%RANDOM%.txt\"",
+            "echo Analysis summary %date% > \"%USERPROFILE%\\Desktop\\WorkSandbox\\reports\\analysis_%RANDOM%.txt\"",
+            "xcopy /Y /I \"%USERPROFILE%\\Desktop\\WorkSandbox\\drafts\\*.txt\" \"%USERPROFILE%\\Desktop\\WorkSandbox\\reports\\\"",
+            "xcopy /Y /I \"%USERPROFILE%\\Desktop\\WorkSandbox\\drafts\\*.txt\" \"%USERPROFILE%\\Desktop\\WorkSandbox\\archive\\\"",
+            "copy /Y \"%USERPROFILE%\\Desktop\\WorkSandbox\\reports\\*.txt\" \"%USERPROFILE%\\Desktop\\WorkSandbox\\archive\\\"",
+            "move /Y \"%USERPROFILE%\\Desktop\\WorkSandbox\\drafts\\*.txt\" \"%USERPROFILE%\\Desktop\\WorkSandbox\\reports\\\"",
+            "dir %USERPROFILE%\\Desktop\\WorkSandbox",
+            "dir %USERPROFILE%\\Desktop\\WorkSandbox\\reports",
+            "dir %USERPROFILE%\\Desktop\\WorkSandbox",
+            "dir %USERPROFILE%\\Desktop\\WorkSandbox\\drafts",
+            "echo Activity log entry %date% %time% >> \"%USERPROFILE%\\Desktop\\WorkSandbox\\activity.log\"",
+            "del /Q \"%USERPROFILE%\\Desktop\\WorkSandbox\\archive\\*.txt\"",
+            "del /Q \"%USERPROFILE%\\Desktop\\WorkSandbox\\reports\\*.txt\""
+          ],
+          "DelayAfter": { "random": true, "min": 35000, "max": 120000 },
+          "DelayBefore": 5000
+        }
+      ],
+      "ScheduleType": "Other"
+    },
+
+    {
+      "HandlerType": "Notepad",
+      "Initial": "",
+      "UtcTimeOn": "00:00:00",
+      "UtcTimeOff": "00:00:00",
+      "HandlerArgs": {
+        "execution-probability": 90,
+        "creation-probability": 44,
+        "modification-probability": 30,
+        "view-probability": 19,
+        "deletion-probability": 7,
+        "input-directory": "%USERPROFILE%\\Desktop\\WorkSandbox\\drafts",
+        "output-directory": "%USERPROFILE%\\Desktop\\WorkSandbox\\drafts",
+        "text-generation": "random",
+        "min-paragraphs": 2,
+        "max-paragraphs": 8,
+        "delay-jitter": 40
+      },
+      "Loop": true,
+      "TimeLineEvents": [
+        {
+          "Command": "random",
+          "CommandArgs": [],
+          "DelayAfter": { "random": true, "min": 60000, "max": 180000 },
+          "DelayBefore": 8000
+        }
+      ],
+      "ScheduleType": "Other"
     }
+
   ]
 }
