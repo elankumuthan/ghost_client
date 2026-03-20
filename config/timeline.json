@@ -25,15 +25,7 @@
             "http://172.16.60.100:8088/sites/krebsonsecurity.com/",
             "http://172.16.60.100:8088/sites/www.bleepingcomputer.com/",
             "http://172.16.60.100:8088/sites/thehackernews.com/",
-            "http://172.16.60.100:8088/sites/www.cisa.gov/news-events/cybersecurity-advisories/",
-            "http://172.16.60.100:8088/sites/owasp.org/www-community/vulnerabilities/",
-            "http://172.16.60.100:8088/sites/www.sans.org/blog/",
-            "http://172.16.60.100:8088/sites/www.securityweek.com/",
-            "http://172.16.60.100:8088/sites/developer.mozilla.org/en-US/docs/Web/Security/",
-            "http://172.16.60.100:8088/sites/arstechnica.com/security/",
-            "http://172.16.60.100:8088/sites/www.theregister.com/security/",
-            "http://172.16.60.100:8088/sites/techcrunch.com/category/security/",
-            "http://172.16.60.100:8088/sites/www.reuters.com/technology/"
+            "http://172.16.60.100:8088/sites/news.ycombinator.com/"
           ],
           "DelayAfter": { "random": true, "min": 12000, "max": 35000 },
           "DelayBefore": 1500
@@ -65,15 +57,7 @@
             "http://172.16.60.100:8088/sites/krebsonsecurity.com/",
             "http://172.16.60.100:8088/sites/www.bleepingcomputer.com/",
             "http://172.16.60.100:8088/sites/thehackernews.com/",
-            "http://172.16.60.100:8088/sites/www.cisa.gov/news-events/cybersecurity-advisories/",
-            "http://172.16.60.100:8088/sites/owasp.org/www-community/vulnerabilities/",
-            "http://172.16.60.100:8088/sites/www.sans.org/blog/",
-            "http://172.16.60.100:8088/sites/www.securityweek.com/",
-            "http://172.16.60.100:8088/sites/developer.mozilla.org/en-US/docs/Web/Security/",
-            "http://172.16.60.100:8088/sites/arstechnica.com/security/",
-            "http://172.16.60.100:8088/sites/www.theregister.com/security/",
-            "http://172.16.60.100:8088/sites/techcrunch.com/category/security/",
-            "http://172.16.60.100:8088/sites/www.reuters.com/technology/"
+            "http://172.16.60.100:8088/sites/news.ycombinator.com/"
           ],
           "DelayAfter": { "random": true, "min": 25000, "max": 80000 },
           "DelayBefore": 3000
