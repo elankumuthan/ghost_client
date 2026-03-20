@@ -163,7 +163,8 @@
             "https://www.reddit.com/r/sysadmin",
             "https://duckduckgo.com/?q={query}",
             "https://duckduckgo.com/?q={query}",
-            "https://github.com/search?q={query}",
+            "https://github.com/cmu-sei/GHOSTS",
+            "https://github.com/cmu-sei/GHOSTS/tree/master/src",
             "https://stackoverflow.com/search?q={query}"
           ],
           "DelayAfter": { "random": true, "min": 25000, "max": 80000 },
