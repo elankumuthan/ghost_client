@@ -10,6 +10,7 @@
       "UtcTimeOff": "00:00:00",
       "HandlerArgs": {
         "isheadless": "false",
+        "profile-path": "C:\\Users\\A.Robert\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\hed4d764.ghosts-user",
         "delay-jitter": 50,
         "outlook-credentials-file": "C:\\ghosts-client-x64-v8.0.0\\config\\owa-credentials.json",
         "outlook-credential-key": "owa01",
@@ -64,6 +65,7 @@
       "UtcTimeOff": "00:00:00",
       "HandlerArgs": {
         "isheadless": "false",
+        "profile-path": "C:\\Users\\A.Robert\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\hed4d764.ghosts-user",
         "delay-jitter": 40,
         "stickiness": 65,
         "stickiness-depth-min": 2,
