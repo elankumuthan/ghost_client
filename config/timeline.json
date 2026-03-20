@@ -11,11 +11,7 @@
       "HandlerArgs": {
         "isheadless": "false",
         "profile-path": "C:\\Users\\A.Robert\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\hed4d764.ghosts-user",
-        "delay-jitter": 35,
-        "stickiness": 55,
-        "stickiness-depth-min": 1,
-        "stickiness-depth-max": 4,
-        "visited-remember": 6
+        "delay-jitter": 35
       },
       "Loop": true,
       "TimeLineEvents": [
@@ -43,10 +39,6 @@
         "isheadless": "false",
         "profile-path": "C:\\Users\\A.Robert\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\hed4d764.ghosts-user",
         "delay-jitter": 40,
-        "stickiness": 65,
-        "stickiness-depth-min": 2,
-        "stickiness-depth-max": 7,
-        "visited-remember": 8,
         "javascript-enable": "true"
       },
       "Loop": true,
