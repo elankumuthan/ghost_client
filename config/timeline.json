@@ -24,7 +24,7 @@
             "http://172.16.60.100:8088/sites/news.ycombinator.com/"
           ],
           "DelayAfter": { "random": true, "min": 12000, "max": 35000 },
-          "DelayBefore": 1500
+          "DelayBefore": 600000
         }
       ],
       "ScheduleType": "Other"
@@ -52,7 +52,7 @@
             "http://172.16.60.100:8088/sites/news.ycombinator.com/"
           ],
           "DelayAfter": { "random": true, "min": 25000, "max": 80000 },
-          "DelayBefore": 3000
+          "DelayBefore": 720000
         }
       ],
       "ScheduleType": "Other"
