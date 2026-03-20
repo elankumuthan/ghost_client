@@ -5,61 +5,6 @@
 
     {
       "HandlerType": "BrowserFirefox",
-      "Initial": "http://172.16.60.100:8088/sites/krebsonsecurity.com/",
-      "UtcTimeOn": "00:00:00",
-      "UtcTimeOff": "00:00:00",
-      "HandlerArgs": {
-        "isheadless": "false",
-        "profile-path": "C:\\Users\\A.Robert\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\hed4d764.ghosts-user",
-        "delay-jitter": 35
-      },
-      "Loop": true,
-      "TimeLineEvents": [
-        {
-          "Command": "random",
-          "CommandArgs": [
-            "http://172.16.60.100:8088/sites/krebsonsecurity.com/",
-            "http://172.16.60.100:8088/sites/www.bleepingcomputer.com/",
-            "http://172.16.60.100:8088/sites/thehackernews.com/",
-            "http://172.16.60.100:8088/sites/news.ycombinator.com/"
-          ],
-          "DelayAfter": { "random": true, "min": 12000, "max": 35000 },
-          "DelayBefore": 600000
-        }
-      ],
-      "ScheduleType": "Other"
-    },
-
-    {
-      "HandlerType": "BrowserFirefox",
-      "Initial": "http://172.16.60.100:8088/sites/www.bleepingcomputer.com/",
-      "UtcTimeOn": "00:00:00",
-      "UtcTimeOff": "00:00:00",
-      "HandlerArgs": {
-        "isheadless": "false",
-        "profile-path": "C:\\Users\\A.Robert\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\hed4d764.ghosts-user",
-        "delay-jitter": 40,
-        "javascript-enable": "true"
-      },
-      "Loop": true,
-      "TimeLineEvents": [
-        {
-          "Command": "random",
-          "CommandArgs": [
-            "http://172.16.60.100:8088/sites/krebsonsecurity.com/",
-            "http://172.16.60.100:8088/sites/www.bleepingcomputer.com/",
-            "http://172.16.60.100:8088/sites/thehackernews.com/",
-            "http://172.16.60.100:8088/sites/news.ycombinator.com/"
-          ],
-          "DelayAfter": { "random": true, "min": 25000, "max": 80000 },
-          "DelayBefore": 720000
-        }
-      ],
-      "ScheduleType": "Other"
-    },
-
-    {
-      "HandlerType": "BrowserFirefox",
       "Initial": "https://mail.cybergridpower.com/owa/",
       "UtcTimeOn": "00:00:00",
       "UtcTimeOff": "00:00:00",
