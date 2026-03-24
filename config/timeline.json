@@ -1,1 +1,59 @@
-{"Id":"c4a57d6b-e912-4d40-bb50-5f3ec9e3d1f1","Status":"Run","TimeLineHandlers":[{"HandlerType":"Outlookv2","Initial":"","UtcTimeOn":"00:00:00","UtcTimeOff":"00:00:00","HandlerArgs":{"create-probability":100,"read-probability":0,"reply-probability":0,"delete-probability":0,"attachment-probability":0,"save-attachment-probability":0},"Loop":true,"TimeLineEvents":[{"Command":"","CommandArgs":["CurrentUser","A.Robert@cybergridpower.com","","","GHOSTS test message","If you got this, Outlookv2 send is working.","PlainText",""],"DelayAfter":60000,"DelayBefore":0}],"ScheduleType":"Other"}]}
+{
+	"Id": "10216615-969e-488a-8f74-952eca782121",
+	"Status": "Run",
+	"TimeLineHandlers": [
+		{
+			"HandlerType": "BrowserFirefox",
+			"Initial": "about:blank",
+			"UtcTimeOn": "00:00:00",
+			"UtcTimeOff": "00:00:00",
+			"HandlerArgs": {
+				"isheadless": "false",
+				"delay-jitter": 50,
+				"outlook-credentials-file": "C:\\ghost_client\\config\\owa-credentials.json",
+				"outlook-credential-key": "owa01",
+				"outlook-url": "https://mail.cybergridpower.com/owa/",
+				"exchange-version": "2019",
+				"outlook-email-domain-addresses": [
+					"t.david@cybergridpower.com",
+					"a.robert@cybergridpower.com",
+					"c.michael@cybergridpower.com",
+					"w.sara@cybergridpower.com",
+					"m.jennifer@cybergridpower.com"
+				],
+				"outlook-delete-probability": 15,
+				"outlook-read-probability": 45,
+				"outlook-reply-probability": 20,
+				"outlook-create-probability": 20,
+				"outlook-attachment-probability": 40,
+				"outlook-save-attachment-probability": 40,
+				"outlook-min-attachments": 0,
+				"outlook-max-attachments": 2,
+				"outlook-max-attachments-size": 10,
+				"outlook-uploads-directory": "C:\\ghost_client\\config",
+				"command-line-args": [
+					"--ignore-certificate-errors"
+				]
+			},
+			"Loop": true,
+			"TimeLineEvents": [
+				{
+					"Command": "outlook",
+					"CommandArgs": [
+						"CurrentUser",
+						"random",
+						"random",
+						"random",
+						"Random",
+						"Random",
+						"PlainText",
+						""
+					],
+					"DelayAfter": 10000,
+					"DelayBefore": 0
+				}
+			],
+			"ScheduleType": "Other"
+		}
+	]
+}
