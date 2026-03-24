@@ -54,7 +54,7 @@
           "Command": "outlook",
           "CommandArgs": [
             "a.robert@cybergridpower.com",
-            "a.robert@cybergridpower.com;c.michael@cybergridpower.com;m.jennifer@cybergridpower.com;t.david@cybergridpower.com;w.sara@cybergridpower.com",
+            "a.robert@cybergridpower.com,c.michael@cybergridpower.com,m.jennifer@cybergridpower.com,t.david@cybergridpower.com,w.sara@cybergridpower.com",
             "",
             "",
             "Random",
