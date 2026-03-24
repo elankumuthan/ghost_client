@@ -114,26 +114,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ghosts.exe" size="367616">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ghosts.exe" size="391168">
       <assemblyIdentity name="ghosts" version="8.0.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>YqG8XQgIzjVeButd2gtESAONZUOTvItgaZrFmjK9f/U=</dsig:DigestValue>
+        <dsig:DigestValue>+8oOuNoKstKxt22RoyZUnswhlwRicD2kSqesVJOhgJc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Ghosts.Domain.dll" size="76288">
-      <assemblyIdentity name="Ghosts.Domain" version="8.2.0.0" language="neutral" processorArchitecture="amd64" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ghosts.domain.dll" size="79872">
+      <assemblyIdentity name="ghosts.domain" version="8.2.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>mOzoDloZmHs/BbDwSlfCtbLKmT5bAjB+dECzt+EAeR4=</dsig:DigestValue>
+        <dsig:DigestValue>w5bNbHCvLAGaf5b0XWlB09OItDvUJKw8nWyFGb1j7Qw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1146,14 +1146,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NLog.dll" size="961024">
-      <assemblyIdentity name="NLog" version="5.0.0.0" publicKeyToken="5120E14C03D0593C" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NLog.dll" size="919552">
+      <assemblyIdentity name="NLog" version="6.0.0.0" publicKeyToken="5120E14C03D0593C" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>dioqarIp9Y+8VJ9NxIv+S8LXFnlSrGiN8Q1XWtGxMoM=</dsig:DigestValue>
+        <dsig:DigestValue>cqcXAuJ+UmYnoxRa5L1hwhuxM0pV58BKjh33ZT5IgcA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -2789,13 +2789,34 @@
       </hash>
     </dependentAssembly>
   </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="YamlDotNet.dll" size="291840">
+      <assemblyIdentity name="YamlDotNet" version="16.0.0.0" publicKeyToken="EC19458F3C15AF5E" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>QmcjR0XeBwJ0FUNcSy8r2rUBlJTWLcdP0i5KnvWFSuk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="config\application.example.yaml" size="2307">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>HCTdFtMcGjUQM8E6PxPJADUvxqi9JWErjytAbksvY5Y=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="config\application.json" size="2940">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>B/hzUHLau8iUvZKuSV8po3DQcs2FV+xDkS7hz4OakgQ=</dsig:DigestValue>
+      <dsig:DigestValue>IZmajX57pj+IavnCLKjwlgXELwZki/sGawrUzVjQx2Y=</dsig:DigestValue>
     </hash>
   </file>
   <file name="config\denylist.txt" size="157">

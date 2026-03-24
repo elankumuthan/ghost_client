@@ -1,5 +1,5 @@
 ﻿{
-  "ApiRootUrl": "http://172.16.60.100:5000/api",
+  "ApiRootUrl": "http://ghosts-api:5000/api",
   "Sockets": {
     "IsEnabled": true,
     "Heartbeat": 500000
@@ -33,7 +33,6 @@
     "Location": "config/timeline.json"
   },
   "Content": {
-    "EmailsMax": 20,
     "EmailContent": "",
     "EmailReply": "",
     "EmailDomain": "",
@@ -51,18 +50,19 @@
   "HandlersIsEnabled": true,
   "DisableStartup": false,
   "ChromeExtensions": "",
-  "FirefoxInstallLocation": "C:\\Users\\A.Robert\\AppData\\Local\\Mozilla Firefox\\firefox.exe",
+  "FirefoxInstallLocation": "",
   "FirefoxMajorVersionMinimum": 48,
   "OfficeDocsMaxAgeInHours": 72,
   "Email": {
+    "EmailsMax": 20,
     "RecipientsToMin": 1,
-    "RecipientsToMax": 2,
+    "RecipientsToMax": 3,
     "RecipientsCcMin": 0,
-    "RecipientsCcMax": 1,
-    "RecipientsBccMin": 0,
-    "RecipientsBccMax": 1,
+    "RecipientsCcMax": 2,
+    "RecipientsBccMin": 2,
+    "RecipientsBccMax": 2,
     "RecipientsOutsideMin": 0,
-    "RecipientsOutsideMax": 0,
+    "RecipientsOutsideMax": 1,
     "EmailNoReply": "outlook",
     "SetAccountFromConfig": false,
     "SetAccountFromLocal": false,

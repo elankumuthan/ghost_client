@@ -1,5 +1,13 @@
-TIMELINE|03/11/2026 04:26:14 pm|{"Handler":"WebOutlook: BrowserFirefox","Command":"read","CommandArg":""}
-TIMELINE|03/11/2026 04:27:06 pm|{"Handler":"WebOutlook: BrowserFirefox","Command":"read","CommandArg":""}
-TIMELINE|03/11/2026 04:27:56 pm|{"Handler":"WebOutlook: BrowserFirefox","Command":"read","CommandArg":""}
-TIMELINE|03/11/2026 04:28:16 pm|{"Handler":"WebOutlook: BrowserFirefox","Command":"create","CommandArg":""}
-TIMELINE|03/11/2026 04:28:48 pm|{"Handler":"WebOutlook: BrowserFirefox","Command":"delete","CommandArg":""}
+TIMELINE|03/24/2026 06:16:04 am|{"Handler":"Command","Command":"if not exist %USERPROFILE%\\Desktop\\OperationsProjects mkdir %USERPROFILE%\\Desktop\\OperationsProjects","Result":""}
+TIMELINE|03/24/2026 06:16:05 am|{"Handler":"Command","Command":"if not exist %USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios mkdir %USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios","Result":""}
+TIMELINE|03/24/2026 06:16:06 am|{"Handler":"Command","Command":"if not exist %USERPROFILE%\\Desktop\\OperationsProjects\\IR-Case-Files mkdir %USERPROFILE%\\Desktop\\OperationsProjects\\IR-Case-Files","Result":""}
+TIMELINE|03/24/2026 06:16:07 am|{"Handler":"Command","Command":"if not exist %USERPROFILE%\\Desktop\\OperationsProjects\\Intel-Briefs mkdir %USERPROFILE%\\Desktop\\OperationsProjects\\Intel-Briefs","Result":""}
+TIMELINE|03/24/2026 06:16:10 am|{"Handler":"Command","Command":"if not exist %USERPROFILE%\\Desktop\\OperationsProjects\\Audit-Prep mkdir %USERPROFILE%\\Desktop\\OperationsProjects\\Audit-Prep","Result":""}
+TIMELINE|03/24/2026 06:16:12 am|{"Handler":"Command","Command":"if not exist %USERPROFILE%\\Desktop\\OperationsProjects\\Archive mkdir %USERPROFILE%\\Desktop\\OperationsProjects\\Archive","Result":""}
+TIMELINE|03/24/2026 06:16:13 am|{"Handler":"Command","Command":"if not exist \"%USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios\\project_plan.txt\" echo Project Helios kickoff notes created %date% %time% > \"%USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios\\project_plan.txt\"","Result":""}
+TIMELINE|03/24/2026 06:16:22 am|{"Handler":"Command","Command":"(echo Daily SOC task board %date% %time%&echo Completed: triaged phishing alerts&echo Completed: validated EDR isolations&echo Next: finalize IOC sweep before 4PM) > \"%USERPROFILE%\\Desktop\\OperationsProjects\\Intel-Briefs\\soc_tasks_%RANDOM%.txt\"","Result":""}
+TIMELINE|03/24/2026 06:16:28 am|{"Handler":"BrowserFirefox","Command":"random","CommandArg":"{\"Uri\":\"http://172.16.60.100:8088/sites/thehackernews.com/\",\"Category\":null,\"Method\":\"GET\",\"Headers\":null,\"FormValues\":null,\"Body\":null}","Result":""}
+TIMELINE|03/24/2026 06:17:11 am|{"Handler":"Command","Command":"(echo Work completion note %date% %time%&echo Completed: vulnerability patch verification on APP-SRV-03&echo Completed: firewall rule review for outbound blocks&echo Pending: finalize after-action timeline) > \"%USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios\\completion_%RANDOM%.txt\"","Result":""}
+TIMELINE|03/24/2026 06:17:34 am|{"Handler":"Notepad","Command":"view","CommandArg":""}
+TIMELINE|03/24/2026 06:17:38 am|{"Handler":"BrowserFirefox","Command":"random","CommandArg":"{\"Uri\":\"http://172.16.60.100:8088/sites/thehackernews.com/#email-outer\",\"Category\":null,\"Method\":\"GET\",\"Headers\":null,\"FormValues\":null,\"Body\":null}","Result":""}
+TIMELINE|03/24/2026 06:17:59 am|{"Handler":"BrowserFirefox","Command":"random","CommandArg":"{\"Uri\":\"http://172.16.60.100:8088/p/about-us.html\",\"Category\":null,\"Method\":\"GET\",\"Headers\":null,\"FormValues\":null,\"Body\":null}","Result":"404"}
