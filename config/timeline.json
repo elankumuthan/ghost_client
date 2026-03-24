@@ -61,8 +61,8 @@
             "PlainText",
             ""
           ],
-          "DelayAfter": { "random": true, "min": 240000, "max": 720000 },
-          "DelayBefore": 20000
+          "DelayAfter": { "random": true, "min": 60000, "max": 180000 },
+          "DelayBefore": 5000
         }
       ],
       "ScheduleType": "Other"
@@ -99,8 +99,8 @@
             "http://172.16.60.100:8088/sites/krebsonsecurity.com/",
             "http://172.16.60.100:8088/sites/www.bleepingcomputer.com/"
           ],
-          "DelayAfter": { "random": true, "min": 45000, "max": 180000 },
-          "DelayBefore": 25000
+          "DelayAfter": { "random": true, "min": 30000, "max": 90000 },
+          "DelayBefore": 15000
         }
       ],
       "ScheduleType": "Other"
@@ -153,8 +153,8 @@
             "(echo temporary cache %date% %time% > \"%USERPROFILE%\\Desktop\\OperationsProjects\\IR-Case-Files\\temp_%RANDOM%.tmp\") && del /q \"%USERPROFILE%\\Desktop\\OperationsProjects\\IR-Case-Files\\temp_*.tmp\"",
             "forfiles /P \"%USERPROFILE%\\Desktop\\OperationsProjects\\Archive\" /M *.txt /D -1 /C \"cmd /c del /q @path\""
           ],
-          "DelayAfter": { "random": true, "min": 35000, "max": 120000 },
-          "DelayBefore": 5000
+          "DelayAfter": { "random": true, "min": 20000, "max": 60000 },
+          "DelayBefore": 2000
         },
         {
           "Command": "random",
@@ -166,8 +166,8 @@
             "ren \"%USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios\\project_plan_v2.txt\" project_plan.txt",
             "type \"%USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios\\project_plan.txt\" >> \"%USERPROFILE%\\Desktop\\OperationsProjects\\activity.log\""
           ],
-          "DelayAfter": { "random": true, "min": 90000, "max": 240000 },
-          "DelayBefore": 15000
+          "DelayAfter": { "random": true, "min": 25000, "max": 75000 },
+          "DelayBefore": 3000
         }
       ],
       "ScheduleType": "Other"
@@ -196,8 +196,8 @@
         {
           "Command": "random",
           "CommandArgs": [],
-          "DelayAfter": { "random": true, "min": 60000, "max": 180000 },
-          "DelayBefore": 45000
+          "DelayAfter": { "random": true, "min": 30000, "max": 90000 },
+          "DelayBefore": 10000
         }
       ],
       "ScheduleType": "Other"
@@ -226,8 +226,8 @@
         {
           "Command": "random",
           "CommandArgs": [],
-          "DelayAfter": { "random": true, "min": 90000, "max": 240000 },
-          "DelayBefore": 50000
+          "DelayAfter": { "random": true, "min": 30000, "max": 90000 },
+          "DelayBefore": 8000
         }
       ],
       "ScheduleType": "Other"
