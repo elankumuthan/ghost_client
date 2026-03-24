@@ -1,1 +1,190 @@
-{"Id":"1e3be3b1-8bf2-4d85-a0ae-f6929dd93024","Status":"Run","TimeLineHandlers":[{"HandlerType":"Outlookv2","Initial":"","UtcTimeOn":"00:00:00","UtcTimeOff":"00:00:00","HandlerArgs":{"create-probability":100,"read-probability":0,"reply-probability":0,"delete-probability":0,"attachment-probability":0,"save-attachment-probability":0},"Loop":true,"TimeLineEvents":[{"Command":"","CommandArgs":["CurrentUser","A.Robert@cybergridpower.com","","","GHOSTS test message","If you got this, Outlookv2 send is working.","PlainText",""],"DelayAfter":60000,"DelayBefore":0}],"ScheduleType":"Other"}]}
+{
+  "Id": "10216615-969e-488a-8f74-952eca782121",
+  "Status": "Run",
+  "TimeLineHandlers": [
+
+    {
+      "HandlerType": "BrowserFirefox",
+      "Initial": "https://mail.cybergridpower.com/owa/",
+      "UtcTimeOn": "00:00:00",
+      "UtcTimeOff": "00:00:00",
+      "HandlerArgs": {
+        "isheadless": "false",
+        "profile-path": "C:\\Users\\A.Robert\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\hed4d764.ghosts-user",
+        "delay-jitter": 50,
+        "outlook-credentials-file": "C:\\ghost_client\\config\\owa-credentials.json",
+        "outlook-credentials": {
+          "Version": "1.0",
+          "Data": {
+            "owa01": {
+              "domain": "CYBERGRIDPOWER",
+              "username": "A.robert",
+              "password": "UEBzc3cwcmQ="
+            }
+          }
+        },
+        "outlook-credential-key": "owa01",
+        "outlook-url": "https://mail.cybergridpower.com/owa/",
+        "exchange-version": "2019",
+        "outlook-email-domain-addresses": [
+          "c.michael@cybergridpower.com",
+          "m.jennifer@cybergridpower.com",
+          "t.david@cybergridpower.com",
+          "w.sara@cybergridpower.com"
+        ],
+        "outlook-delete-probability": 0,
+        "outlook-read-probability": 0,
+        "outlook-reply-probability": 0,
+        "outlook-create-probability": 100,
+        "outlook-attachment-probability": 20,
+        "outlook-save-attachment-probability": 30,
+        "outlook-min-attachments": 0,
+        "outlook-max-attachments": 1,
+        "outlook-max-attachments-size": 5,
+        "outlook-uploads-directory": "C:\\ghost_client\\config",
+        "accept-insecure-certificates": "true",
+        "command-line-args": [
+          "--ignore-certificate-errors"
+        ]
+      },
+      "Loop": true,
+      "TimeLineEvents": [
+        {
+          "Command": "outlook",
+          "CommandArgs": [
+            "a.robert@cybergridpower.com",
+            "Random",
+            "",
+            "",
+            "Random",
+            "Random",
+            "PlainText",
+            ""
+          ],
+          "DelayAfter": 45000,
+          "DelayBefore": 0
+        }
+      ],
+      "ScheduleType": "Other"
+    },
+
+    {
+      "HandlerType": "BrowserFirefox",
+      "Initial": "http://172.16.60.100:8088/sites/krebsonsecurity.com/",
+      "UtcTimeOn": "00:00:00",
+      "UtcTimeOff": "00:00:00",
+      "HandlerArgs": {
+        "isheadless": "false",
+        "delay-jitter": 30,
+        "stickiness": 60,
+        "stickiness-depth-min": 1,
+        "stickiness-depth-max": 5,
+        "visited-remember": 10,
+        "browse-probability": 100,
+        "actions-before-restart": 120,
+        "accept-insecure-certificates": "true",
+        "command-line-args": [
+          "--ignore-certificate-errors"
+        ]
+      },
+      "Loop": true,
+      "TimeLineEvents": [
+        {
+          "Command": "random",
+          "CommandArgs": [
+            "http://172.16.60.100:8088/sites/krebsonsecurity.com/",
+            "http://172.16.60.100:8088/sites/www.bleepingcomputer.com/",
+            "http://172.16.60.100:8088/sites/news.ycombinator.com/",
+            "http://172.16.60.100:8088/sites/thehackernews.com/"
+          ],
+          "DelayAfter": { "random": true, "min": 20000, "max": 70000 },
+          "DelayBefore": 15000
+        }
+      ],
+      "ScheduleType": "Other"
+    },
+
+    {
+      "HandlerType": "Command",
+      "Initial": "",
+      "UtcTimeOn": "00:00:00",
+      "UtcTimeOff": "00:00:00",
+      "HandlerArgs": {
+        "execution-probability": 85,
+        "delay-jitter": 40
+      },
+      "Loop": true,
+      "TimeLineEvents": [
+        {
+          "Command": "if not exist %USERPROFILE%\\Desktop\\OperationsProjects mkdir %USERPROFILE%\\Desktop\\OperationsProjects",
+          "CommandArgs": [
+            "if not exist %USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios mkdir %USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios",
+            "if not exist %USERPROFILE%\\Desktop\\OperationsProjects\\IR-Case-Files mkdir %USERPROFILE%\\Desktop\\OperationsProjects\\IR-Case-Files",
+            "if not exist %USERPROFILE%\\Desktop\\OperationsProjects\\Intel-Briefs mkdir %USERPROFILE%\\Desktop\\OperationsProjects\\Intel-Briefs",
+            "if not exist %USERPROFILE%\\Desktop\\OperationsProjects\\Audit-Prep mkdir %USERPROFILE%\\Desktop\\OperationsProjects\\Audit-Prep",
+            "if not exist %USERPROFILE%\\Desktop\\OperationsProjects\\Archive mkdir %USERPROFILE%\\Desktop\\OperationsProjects\\Archive",
+            "if not exist \"%USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios\\project_plan.txt\" echo Project Helios kickoff notes created %date% %time% > \"%USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios\\project_plan.txt\""
+          ],
+          "DelayAfter": 3000,
+          "DelayBefore": 0
+        },
+        {
+          "Command": "random",
+          "CommandArgs": [
+            "dir %USERPROFILE%\\Desktop\\OperationsProjects",
+            "dir %USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios",
+            "dir %USERPROFILE%\\Desktop\\OperationsProjects\\Intel-Briefs",
+            "dir %USERPROFILE%\\Desktop\\OperationsProjects\\IR-Case-Files",
+            "dir %USERPROFILE%\\Desktop\\OperationsProjects\\Audit-Prep",
+            "dir %USERPROFILE%\\Desktop\\OperationsProjects\\Archive",
+            "(echo Project Helios daily standup %date% %time%&echo Milestone: data connector validation&echo Owner: Platform Engineering) > \"%USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios\\standup_%RANDOM%.txt\"",
+            "(echo Threat brief update %date% %time%&echo Topic: suspicious authentication patterns&echo Action: review SIEM alerts and ticket anomalies) > \"%USERPROFILE%\\Desktop\\OperationsProjects\\Intel-Briefs\\brief_%RANDOM%.txt\"",
+            "(echo IR Case IR-%RANDOM%&echo Status: triage in progress&echo Task: collect EDR timeline and DNS history) > \"%USERPROFILE%\\Desktop\\OperationsProjects\\IR-Case-Files\\case_%RANDOM%.txt\"",
+            "(echo Audit prep checklist %date%&echo 1. verify access reviews&echo 2. export evidence&echo 3. update owner mappings) > \"%USERPROFILE%\\Desktop\\OperationsProjects\\Audit-Prep\\audit_%RANDOM%.txt\"",
+            "(echo Daily SOC task board %date% %time%&echo Completed: triaged phishing alerts&echo Completed: validated EDR isolations&echo Next: finalize IOC sweep before 4PM) > \"%USERPROFILE%\\Desktop\\OperationsProjects\\Intel-Briefs\\soc_tasks_%RANDOM%.txt\"",
+            "(echo Work completion note %date% %time%&echo Completed: vulnerability patch verification on APP-SRV-03&echo Completed: firewall rule review for outbound blocks&echo Pending: finalize after-action timeline) > \"%USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios\\completion_%RANDOM%.txt\"",
+            "xcopy /Y /I \"%USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios\\*.txt\" \"%USERPROFILE%\\Desktop\\OperationsProjects\\Archive\\\"",
+            "copy /Y \"%USERPROFILE%\\Desktop\\OperationsProjects\\IR-Case-Files\\*.txt\" \"%USERPROFILE%\\Desktop\\OperationsProjects\\Archive\\\"",
+            "echo Activity log entry %date% %time% >> \"%USERPROFILE%\\Desktop\\OperationsProjects\\activity.log\"",
+            "(echo temporary cache %date% %time% > \"%USERPROFILE%\\Desktop\\OperationsProjects\\IR-Case-Files\\temp_%RANDOM%.tmp\") && del /q \"%USERPROFILE%\\Desktop\\OperationsProjects\\IR-Case-Files\\temp_*.tmp\"",
+            "forfiles /P \"%USERPROFILE%\\Desktop\\OperationsProjects\\Archive\" /M *.txt /D -1 /C \"cmd /c del /q @path\""
+          ],
+          "DelayAfter": { "random": true, "min": 35000, "max": 120000 },
+          "DelayBefore": 5000
+        }
+      ],
+      "ScheduleType": "Other"
+    },
+
+    {
+      "HandlerType": "Notepad",
+      "Initial": "",
+      "UtcTimeOn": "00:00:00",
+      "UtcTimeOff": "00:00:00",
+      "HandlerArgs": {
+        "execution-probability": 80,
+        "creation-probability": 0,
+        "modification-probability": 0,
+        "view-probability": 80,
+        "deletion-probability": 20,
+        "input-directory": "%USERPROFILE%\\Desktop\\OperationsProjects\\Intel-Briefs",
+        "output-directory": "%USERPROFILE%\\Desktop\\OperationsProjects\\Intel-Briefs",
+        "text-generation": "random",
+        "min-paragraphs": 2,
+        "max-paragraphs": 8,
+        "delay-jitter": 40
+      },
+      "Loop": true,
+      "TimeLineEvents": [
+        {
+          "Command": "random",
+          "CommandArgs": [],
+          "DelayAfter": { "random": true, "min": 60000, "max": 180000 },
+          "DelayBefore": 45000
+        }
+      ],
+      "ScheduleType": "Other"
+    }
+
+  ]
+}
