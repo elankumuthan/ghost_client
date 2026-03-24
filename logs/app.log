@@ -1,0 +1,113 @@
+24/03/2026 8:29:37 AM|Trace|Ghosts.Client.Program.Run|Initiating ghosts startup - Local time: 16:29:37.1288083 UTC: 08:29:37.1288083
+24/03/2026 8:29:37 AM|Debug|Ghosts.Domain.Code.ClientConfigurationLoader.get_Config|App config loaded successfully: C:\ghost_client\config\application.json
+24/03/2026 8:29:37 AM|Trace|Ghosts.Client.Program.Run|Sockets enabled. Connecting...
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Comms.CheckId..ctor|CheckId instance created
+24/03/2026 8:29:37 AM|Debug|Ghosts.Client.Program.Run|CheckId instantiated with ID File Path: C:\ghost_client\instance\id.json
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|GHOSTS (ghosts:8.0.0.0 [8.5.0.0]) running in production mode
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|Installed path: C:\ghost_client
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|Running as Username: A.Robert - WindowsIdentity: CYBERGRIDPOWER\A.Robert
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|C:\ghost_client\config\application.json == True
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|C:\ghost_client\config\dictionary.json == True
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|C:\ghost_client\config\email-content.csv == True
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|C:\ghost_client\config\email-reply.csv == True
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|C:\ghost_client\config\emails-domain.json == True
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|C:\ghost_client\config\emails-outside.json == True
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|C:\ghost_client\config\health.json == True
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|C:\ghost_client\config\timeline.json == True
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|C:\ghost_client\instance\id.json == True
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|C:\ghost_client\instance\files-created.log == False
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|C:\ghost_client\instance\trackables.json == False
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|C:\ghost_client\instance\survey-results.json == False
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|C:\ghost_client\logs\clientupdates.log == True
+24/03/2026 8:29:37 AM|Debug|Ghosts.Client.Infrastructure.GuestInfoVars.Load|System.ComponentModel.Win32Exception: The system cannot find the file specified
+24/03/2026 8:29:37 AM|Debug|Ghosts.Client.Infrastructure.GuestInfoVars.Load|System.ComponentModel.Win32Exception: The system cannot find the file specified
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|------------------
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|Client Check-in Values:
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|Machine.Id = 
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|Machine.Name = ws02-int
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|Machine.CurrentUsername = A.Robert
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|Machine.Domain = cybergridpower.com
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|Machine.ClientIp = 172.16.10.106
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|Machine.FQDN = ws02-int.cybergridpower.com
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|Machine.Host = ws02-int
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|Machine.IpAddress = 
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|Machine.ResolvedHost = ws02-int.cybergridpower.com
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|------------------
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|Configured API Base = http://172.16.60.100:5000/api
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|Configured API Id = http://172.16.60.100:5000/api/clientid
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|Configured API Survey = http://172.16.60.100:5000/api/clientsurvey
+24/03/2026 8:29:37 AM|Trace|Ghosts.Client.Comms.CheckId.get_Id|Id property getter invoked
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|Configured API Socket = http://172.16.60.100:5000/clientHub
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|Configured API Timeline = http://172.16.60.100:5000/api/clienttimeline
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Comms.CheckId.get_Id|ID retrieved from local file: 6971919a-5a0c-4894-b08d-daeab441e952
+24/03/2026 8:29:37 AM|Trace|Ghosts.Client.Comms.CheckId.get_Id|Id property getter invoked
+24/03/2026 8:29:37 AM|Debug|Ghosts.Client.Comms.CheckId.get_Id|Returning cached Id: 6971919a-5a0c-4894-b08d-daeab441e952
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|Configured API Results = http://172.16.60.100:5000/api/clientresults
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|Configured API Updates = http://172.16.60.100:5000/api/clientupdates
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.DebugManager.Write|------------------
+24/03/2026 8:29:37 AM|Trace|Ghosts.Client.Infrastructure.HttpClientBuilder.GetHeaders|Http request headers generated: {"User-Agent":"Ghosts Client","ghosts-name":"ws02-int","ghosts-fqdn":"ws02-int.cybergridpower.com","ghosts-host":"ws02-int","ghosts-domain":"cybergridpower.com","ghosts-resolvedhost":"ws02-int.cybergridpower.com","ghosts-ip":"172.16.10.106","ghosts-version":"8.5.0.0","ghosts-id":"6971919a-5a0c-4894-b08d-daeab441e952","ghosts-user":"QS5Sb2JlcnQ="}
+24/03/2026 8:29:37 AM|Info|Ghosts.Client.Infrastructure.Email.EmailContentManager.Check|Email content loaded successfully with 20 records found
+24/03/2026 8:29:37 AM|Trace|Ghosts.Client.Program.Run|Configuration.ResourceControl.ManageProcesses = True
+24/03/2026 8:29:37 AM|Trace|Ghosts.Client.Infrastructure.StartupTasks.CleanupProcesses|Running process cleaner...
+24/03/2026 8:29:37 AM|Trace|Ghosts.Client.Infrastructure.StartupTasks.CleanupProcesses|Found ghosts pid: 10396
+24/03/2026 8:29:38 AM|Trace|Ghosts.Client.Infrastructure.StartupTasks.CleanupProcesses|Killing firefox
+24/03/2026 8:29:38 AM|Trace|Ghosts.Client.Infrastructure.StartupTasks.CleanupProcesses|Killing geckodriver
+24/03/2026 8:29:38 AM|Trace|Ghosts.Client.Comms.CheckId.WriteId|WriteId method invoked.
+24/03/2026 8:29:38 AM|Debug|Ghosts.Client.Comms.CheckId.WriteId|Received ID for writing: 6971919a-5a0c-4894-b08d-daeab441e952
+24/03/2026 8:29:38 AM|Info|Ghosts.Client.Comms.CheckId.WriteId|ID successfully written to file: C:\ghost_client\instance\id.json
+24/03/2026 8:29:38 AM|Trace|Ghosts.Client.Infrastructure.StartupTasks.CleanupProcesses|Killing firefox
+24/03/2026 8:29:38 AM|Trace|Ghosts.Client.Infrastructure.StartupTasks.CleanupProcesses|Killing geckodriver
+24/03/2026 8:29:38 AM|Trace|Ghosts.Client.Infrastructure.StartupTasks.CleanupProcesses|Killing cmd
+24/03/2026 8:29:38 AM|Trace|Ghosts.Client.Infrastructure.StartupTasks.CleanupProcesses|Killing ghosts
+24/03/2026 8:29:38 AM|Trace|Ghosts.Client.Infrastructure.StartupTasks.SetStartup|Set startup registry key successfully
+24/03/2026 8:29:38 AM|Info|Quartz.Impl.StdSchedulerFactory.InitializeProperties|Default Quartz.NET properties loaded from embedded resource file
+24/03/2026 8:29:38 AM|Debug|Quartz.Impl.StdSchedulerFactory.Instantiate|TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+24/03/2026 8:29:38 AM|Info|Quartz.Core.QuartzScheduler..ctor|Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+24/03/2026 8:29:38 AM|Info|Quartz.Logging.LogProviders.NLogLogProvider+NLogLogger.Log|Quartz Scheduler created
+24/03/2026 8:29:38 AM|Info|Quartz.Simpl.RAMJobStore.Initialize|RAMJobStore initialized.
+24/03/2026 8:29:38 AM|Info|Quartz.Impl.StdSchedulerFactory.Instantiate|Quartz Scheduler 3.8.1.0 - 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+24/03/2026 8:29:38 AM|Info|Quartz.Impl.StdSchedulerFactory.Instantiate|Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+24/03/2026 8:29:38 AM|Info|Quartz.Impl.StdSchedulerFactory.Instantiate|Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+24/03/2026 8:29:38 AM|Info|Quartz.Core.QuartzScheduler.Start|Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+24/03/2026 8:29:38 AM|Trace|Ghosts.Client.Comms.CheckId.get_Id|Id property getter invoked
+24/03/2026 8:29:38 AM|Debug|Ghosts.Client.Comms.CheckId.get_Id|Returning cached Id: 6971919a-5a0c-4894-b08d-daeab441e952
+24/03/2026 8:29:38 AM|Trace|Ghosts.Client.Program.Run|CheckID: 6971919a-5a0c-4894-b08d-daeab441e952
+24/03/2026 8:29:38 AM|Debug|Quartz.Logging.LogProviders.NLogLogProvider+NLogLogger.Log|Batch acquisition of 0 triggers
+24/03/2026 8:29:38 AM|Trace|Ghosts.Client.TimelineManager.Orchestrator.SafetyNet|SafetyNet loop beginning
+24/03/2026 8:29:38 AM|Trace|Ghosts.Client.TimelineManager.Orchestrator.SafetyNet|SafetyNet loop ending
+24/03/2026 8:29:38 AM|Trace|Ghosts.Client.TimelineManager.Orchestrator.SafetyNet|Minimized footprint and memory. Was: 40. Current: 40
+24/03/2026 8:29:38 AM|Trace|Ghosts.Client.TimelineManager.Orchestrator.Run|watching timeline.json
+24/03/2026 8:29:38 AM|Trace|Ghosts.Client.Infrastructure.TempFiles.TempFileWatcher|TempFileWatcher loop beginning
+24/03/2026 8:29:38 AM|Trace|Ghosts.Client.TimelineManager.Orchestrator.Run|Stopfile watcher is starting
+24/03/2026 8:29:38 AM|Trace|Ghosts.Client.TimelineManager.Orchestrator.WhatsInstalled|Outlook is installed: True
+24/03/2026 8:29:38 AM|Trace|Ghosts.Client.TimelineManager.Orchestrator.WhatsInstalled|Word is installed: False
+24/03/2026 8:29:38 AM|Trace|Ghosts.Client.TimelineManager.Orchestrator.WhatsInstalled|Excel is installed: False
+24/03/2026 8:29:38 AM|Trace|Ghosts.Client.TimelineManager.Orchestrator.WhatsInstalled|PowerPoint is installed: False
+24/03/2026 8:29:38 AM|Trace|Ghosts.Client.TimelineManager.Orchestrator.ThreadLaunchEx|Attempting new thread for: BrowserFirefox
+24/03/2026 8:29:38 AM|Trace|Ghosts.Client.TimelineManager.Orchestrator.ThreadLaunchEx|Attempting new thread for: BrowserFirefox
+24/03/2026 8:29:38 AM|Trace|Ghosts.Client.Handlers.BrowserFirefox.GetDriver|Loading firefox profile from C:\Users\A.Robert\AppData\Roaming\Mozilla\Firefox\Profiles\hed4d764.ghosts-user...
+24/03/2026 8:29:38 AM|Trace|Ghosts.Client.TimelineManager.Orchestrator.ThreadLaunchEx|Attempting new thread for: Command
+24/03/2026 8:29:38 AM|Trace|Ghosts.Client.TimelineManager.Orchestrator.ThreadLaunchEx|Attempting new thread for: Notepad
+24/03/2026 8:29:38 AM|Trace|Ghosts.Client.Handlers.Cmd.Ex|Command line: if not exist %USERPROFILE%\Desktop\OperationsProjects mkdir %USERPROFILE%\Desktop\OperationsProjects with delay after of 3000
+24/03/2026 8:29:38 AM|Trace|Ghosts.Client.Handlers.Cmd.Command|Spawning cmd.exe with command if not exist %USERPROFILE%\Desktop\OperationsProjects mkdir %USERPROFILE%\Desktop\OperationsProjects
+24/03/2026 8:29:38 AM|Trace|Ghosts.Client.TimelineManager.Orchestrator.ThreadLaunchEx|Attempting new thread for: Notepad
+24/03/2026 8:29:38 AM|Trace|Ghosts.Client.Infrastructure.TempFiles.TempFileWatcher|TempFileWatcher loop ending
+24/03/2026 8:29:39 AM|Trace|Ghosts.Client.Handlers.Cmd.Command|Spawning cmd.exe with command if not exist %USERPROFILE%\Desktop\OperationsProjects\Project-Helios mkdir %USERPROFILE%\Desktop\OperationsProjects\Project-Helios
+24/03/2026 8:29:40 AM|Trace|Ghosts.Client.Handlers.Cmd.Command|Spawning cmd.exe with command if not exist %USERPROFILE%\Desktop\OperationsProjects\IR-Case-Files mkdir %USERPROFILE%\Desktop\OperationsProjects\IR-Case-Files
+24/03/2026 8:29:41 AM|Trace|Ghosts.Client.Handlers.Cmd.Command|Spawning cmd.exe with command if not exist %USERPROFILE%\Desktop\OperationsProjects\Intel-Briefs mkdir %USERPROFILE%\Desktop\OperationsProjects\Intel-Briefs
+24/03/2026 8:29:42 AM|Trace|Ghosts.Client.Handlers.Cmd.Command|Spawning cmd.exe with command if not exist %USERPROFILE%\Desktop\OperationsProjects\Audit-Prep mkdir %USERPROFILE%\Desktop\OperationsProjects\Audit-Prep
+24/03/2026 8:29:43 AM|Trace|Ghosts.Client.Handlers.Cmd.Command|Spawning cmd.exe with command if not exist %USERPROFILE%\Desktop\OperationsProjects\Archive mkdir %USERPROFILE%\Desktop\OperationsProjects\Archive
+24/03/2026 8:29:44 AM|Trace|Ghosts.Client.Handlers.Cmd.Command|Spawning cmd.exe with command if not exist %USERPROFILE%\Desktop\OperationsProjects\Meeting-Notes mkdir %USERPROFILE%\Desktop\OperationsProjects\Meeting-Notes
+24/03/2026 8:29:45 AM|Trace|Ghosts.Client.Handlers.Cmd.Command|Spawning cmd.exe with command if not exist %USERPROFILE%\Desktop\OperationsProjects\Downloads-Staging mkdir %USERPROFILE%\Desktop\OperationsProjects\Downloads-Staging
+24/03/2026 8:29:46 AM|Trace|Ghosts.Client.Handlers.Cmd.Command|Spawning cmd.exe with command if not exist "%USERPROFILE%\Desktop\OperationsProjects\Project-Helios\project_plan.txt" echo Project Helios kickoff notes created %date% %time% > "%USERPROFILE%\Desktop\OperationsProjects\Project-Helios\project_plan.txt"
+24/03/2026 8:29:48 AM|Trace|Ghosts.Client.Handlers.Notepad.Ex|Notepad:: Action skipped this due to execution probability.
+24/03/2026 8:29:53 AM|Trace|Ghosts.Client.Handlers.Cmd.Ex|Command line: random with delay after of 31290
+24/03/2026 8:29:53 AM|Trace|Ghosts.Client.Handlers.Cmd.Command|Spawning cmd.exe with command (echo Project Helios daily standup %date% %time%&echo Milestone: data connector validation&echo Owner: Platform Engineering) > "%USERPROFILE%\Desktop\OperationsProjects\Project-Helios\standup_%RANDOM%.txt"
+24/03/2026 8:30:05 AM|Debug|Quartz.Logging.LogProviders.NLogLogProvider+NLogLogger.Log|Batch acquisition of 0 triggers
+24/03/2026 8:30:05 AM|Trace|Ghosts.Client.Handlers.BaseBrowserHandler.DoRandomCommand|Creating new link manager with visitedSitesRemembered = 10
+24/03/2026 8:30:05 AM|Trace|Ghosts.Client.Handlers.BaseBrowserHandler.DoRandomCommand|Link manager reset with baseuri = http://172.16.60.100:8088/sites/krebsonsecurity.com/
+24/03/2026 8:30:21 AM|Trace|Ghosts.Client.Handlers.Cmd.Command|Spawning cmd.exe with command (echo Daily SOC task board %date% %time%&echo Completed: triaged phishing alerts&echo Completed: validated EDR isolations&echo Next: finalize IOC sweep before 4PM) > "%USERPROFILE%\Desktop\OperationsProjects\Intel-Briefs\soc_tasks_%RANDOM%.txt"
+24/03/2026 8:30:30 AM|Debug|Quartz.Logging.LogProviders.NLogLogProvider+NLogLogger.Log|Batch acquisition of 0 triggers
+24/03/2026 8:30:53 AM|Debug|Quartz.Logging.LogProviders.NLogLogProvider+NLogLogger.Log|Batch acquisition of 0 triggers
+24/03/2026 8:31:00 AM|Trace|Ghosts.Client.Handlers.Cmd.Ex|Command choice skipped due to execution probability
+24/03/2026 8:31:19 AM|Debug|Quartz.Logging.LogProviders.NLogLogProvider+NLogLogger.Log|Batch acquisition of 0 triggers
