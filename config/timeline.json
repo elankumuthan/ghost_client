@@ -61,8 +61,8 @@
             "PlainText",
             ""
           ],
-          "DelayAfter": 45000,
-          "DelayBefore": 0
+          "DelayAfter": { "random": true, "min": 240000, "max": 720000 },
+          "DelayBefore": 20000
         }
       ],
       "ScheduleType": "Other"
@@ -95,10 +95,12 @@
             "http://172.16.60.100:8088/sites/krebsonsecurity.com/",
             "http://172.16.60.100:8088/sites/www.bleepingcomputer.com/",
             "http://172.16.60.100:8088/sites/news.ycombinator.com/",
-            "http://172.16.60.100:8088/sites/thehackernews.com/"
+            "http://172.16.60.100:8088/sites/thehackernews.com/",
+            "http://172.16.60.100:8088/sites/krebsonsecurity.com/",
+            "http://172.16.60.100:8088/sites/www.bleepingcomputer.com/"
           ],
-          "DelayAfter": { "random": true, "min": 20000, "max": 70000 },
-          "DelayBefore": 15000
+          "DelayAfter": { "random": true, "min": 45000, "max": 180000 },
+          "DelayBefore": 25000
         }
       ],
       "ScheduleType": "Other"
@@ -110,7 +112,7 @@
       "UtcTimeOn": "00:00:00",
       "UtcTimeOff": "00:00:00",
       "HandlerArgs": {
-        "execution-probability": 85,
+        "execution-probability": 72,
         "delay-jitter": 40
       },
       "Loop": true,
@@ -123,6 +125,8 @@
             "if not exist %USERPROFILE%\\Desktop\\OperationsProjects\\Intel-Briefs mkdir %USERPROFILE%\\Desktop\\OperationsProjects\\Intel-Briefs",
             "if not exist %USERPROFILE%\\Desktop\\OperationsProjects\\Audit-Prep mkdir %USERPROFILE%\\Desktop\\OperationsProjects\\Audit-Prep",
             "if not exist %USERPROFILE%\\Desktop\\OperationsProjects\\Archive mkdir %USERPROFILE%\\Desktop\\OperationsProjects\\Archive",
+            "if not exist %USERPROFILE%\\Desktop\\OperationsProjects\\Meeting-Notes mkdir %USERPROFILE%\\Desktop\\OperationsProjects\\Meeting-Notes",
+            "if not exist %USERPROFILE%\\Desktop\\OperationsProjects\\Downloads-Staging mkdir %USERPROFILE%\\Desktop\\OperationsProjects\\Downloads-Staging",
             "if not exist \"%USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios\\project_plan.txt\" echo Project Helios kickoff notes created %date% %time% > \"%USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios\\project_plan.txt\""
           ],
           "DelayAfter": 3000,
@@ -151,6 +155,19 @@
           ],
           "DelayAfter": { "random": true, "min": 35000, "max": 120000 },
           "DelayBefore": 5000
+        },
+        {
+          "Command": "random",
+          "CommandArgs": [
+            "(echo Meeting notes %date% %time%&echo Topic: weekly SOC handoff&echo Action: assign IOC validation owners) > \"%USERPROFILE%\\Desktop\\OperationsProjects\\Meeting-Notes\\meeting_%RANDOM%.txt\"",
+            "(echo Downloaded report placeholder %date% %time%) > \"%USERPROFILE%\\Desktop\\OperationsProjects\\Downloads-Staging\\report_%RANDOM%.txt\"",
+            "copy /Y \"%USERPROFILE%\\Desktop\\OperationsProjects\\Meeting-Notes\\*.txt\" \"%USERPROFILE%\\Desktop\\OperationsProjects\\Archive\\\"",
+            "ren \"%USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios\\project_plan.txt\" project_plan_v2.txt",
+            "ren \"%USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios\\project_plan_v2.txt\" project_plan.txt",
+            "type \"%USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios\\project_plan.txt\" >> \"%USERPROFILE%\\Desktop\\OperationsProjects\\activity.log\""
+          ],
+          "DelayAfter": { "random": true, "min": 90000, "max": 240000 },
+          "DelayBefore": 15000
         }
       ],
       "ScheduleType": "Other"
@@ -162,17 +179,17 @@
       "UtcTimeOn": "00:00:00",
       "UtcTimeOff": "00:00:00",
       "HandlerArgs": {
-        "execution-probability": 80,
-        "creation-probability": 0,
-        "modification-probability": 0,
-        "view-probability": 80,
-        "deletion-probability": 20,
+        "execution-probability": 75,
+        "creation-probability": 45,
+        "modification-probability": 30,
+        "view-probability": 20,
+        "deletion-probability": 5,
         "input-directory": "%USERPROFILE%\\Desktop\\OperationsProjects\\Intel-Briefs",
         "output-directory": "%USERPROFILE%\\Desktop\\OperationsProjects\\Intel-Briefs",
         "text-generation": "random",
-        "min-paragraphs": 2,
-        "max-paragraphs": 8,
-        "delay-jitter": 40
+        "min-paragraphs": 1,
+        "max-paragraphs": 5,
+        "delay-jitter": 30
       },
       "Loop": true,
       "TimeLineEvents": [
@@ -181,6 +198,36 @@
           "CommandArgs": [],
           "DelayAfter": { "random": true, "min": 60000, "max": 180000 },
           "DelayBefore": 45000
+        }
+      ],
+      "ScheduleType": "Other"
+    },
+
+    {
+      "HandlerType": "Notepad",
+      "Initial": "",
+      "UtcTimeOn": "00:00:00",
+      "UtcTimeOff": "00:00:00",
+      "HandlerArgs": {
+        "execution-probability": 68,
+        "creation-probability": 35,
+        "modification-probability": 40,
+        "view-probability": 20,
+        "deletion-probability": 5,
+        "input-directory": "%USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios",
+        "output-directory": "%USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios",
+        "text-generation": "random",
+        "min-paragraphs": 1,
+        "max-paragraphs": 4,
+        "delay-jitter": 35
+      },
+      "Loop": true,
+      "TimeLineEvents": [
+        {
+          "Command": "random",
+          "CommandArgs": [],
+          "DelayAfter": { "random": true, "min": 90000, "max": 240000 },
+          "DelayBefore": 50000
         }
       ],
       "ScheduleType": "Other"
