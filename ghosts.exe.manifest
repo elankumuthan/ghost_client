@@ -114,26 +114,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ghosts.exe" size="391168">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ghosts.exe" size="392704">
       <assemblyIdentity name="ghosts" version="8.0.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>oHwcJ+9N5x500tvU4gfaBHk3iUBil49zWi1CMtSMnYI=</dsig:DigestValue>
+        <dsig:DigestValue>2Vf0VUXImizJ0jo0t9FzWmTUBsdMcbFfHcK8n1+ZUaU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ghosts.domain.dll" size="79872">
-      <assemblyIdentity name="ghosts.domain" version="8.2.0.0" language="neutral" processorArchitecture="amd64" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Ghosts.Domain.dll" size="79872">
+      <assemblyIdentity name="Ghosts.Domain" version="8.2.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>o6L65RoAM/gMbIi1YYEf9Uxs4WgRzo/VV6tUucYcdHc=</dsig:DigestValue>
+        <dsig:DigestValue>FskKHUFGaWdr7s3uVzQMGGNdKcPlgH+CURJDonqOtiI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
