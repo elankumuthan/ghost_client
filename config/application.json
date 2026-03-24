@@ -50,7 +50,7 @@
   "HandlersIsEnabled": true,
   "DisableStartup": false,
   "ChromeExtensions": "",
-  "FirefoxInstallLocation": "",
+  "FirefoxInstallLocation": "C:\\Users\\A.Robert\\AppData\\Local\\Mozilla Firefox\\firefox.exe",
   "FirefoxMajorVersionMinimum": 48,
   "OfficeDocsMaxAgeInHours": 72,
   "Email": {
