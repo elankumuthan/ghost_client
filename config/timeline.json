@@ -27,7 +27,6 @@
         "outlook-url": "https://mail.cybergridpower.com/owa/",
         "exchange-version": "2019",
         "outlook-email-domain-addresses": [
-          "a.robert@cybergridpower.com",
           "c.michael@cybergridpower.com",
           "m.jennifer@cybergridpower.com",
           "t.david@cybergridpower.com",
@@ -54,7 +53,7 @@
           "Command": "outlook",
           "CommandArgs": [
             "a.robert@cybergridpower.com",
-            "a.robert@cybergridpower.com,c.michael@cybergridpower.com,m.jennifer@cybergridpower.com,t.david@cybergridpower.com,w.sara@cybergridpower.com",
+            "Random",
             "",
             "",
             "Random",
@@ -64,6 +63,42 @@
           ],
           "DelayAfter": 45000,
           "DelayBefore": 0
+        }
+      ],
+      "ScheduleType": "Other"
+    },
+
+    {
+      "HandlerType": "BrowserFirefox",
+      "Initial": "http://172.16.60.100:8088/sites/krebsonsecurity.com/",
+      "UtcTimeOn": "00:00:00",
+      "UtcTimeOff": "00:00:00",
+      "HandlerArgs": {
+        "isheadless": "false",
+        "delay-jitter": 30,
+        "stickiness": 60,
+        "stickiness-depth-min": 1,
+        "stickiness-depth-max": 5,
+        "visited-remember": 10,
+        "browse-probability": 100,
+        "actions-before-restart": 120,
+        "accept-insecure-certificates": "true",
+        "command-line-args": [
+          "--ignore-certificate-errors"
+        ]
+      },
+      "Loop": true,
+      "TimeLineEvents": [
+        {
+          "Command": "random",
+          "CommandArgs": [
+            "http://172.16.60.100:8088/sites/krebsonsecurity.com/",
+            "http://172.16.60.100:8088/sites/www.bleepingcomputer.com/",
+            "http://172.16.60.100:8088/sites/news.ycombinator.com/",
+            "http://172.16.60.100:8088/sites/thehackernews.com/"
+          ],
+          "DelayAfter": { "random": true, "min": 20000, "max": 70000 },
+          "DelayBefore": 15000
         }
       ],
       "ScheduleType": "Other"
@@ -81,14 +116,14 @@
       "Loop": true,
       "TimeLineEvents": [
         {
-          "Command": "if not exist %USERPROFILE%\\Desktop\\WorkSandbox mkdir %USERPROFILE%\\Desktop\\WorkSandbox",
+          "Command": "if not exist %USERPROFILE%\\Desktop\\OperationsProjects mkdir %USERPROFILE%\\Desktop\\OperationsProjects",
           "CommandArgs": [
-            "if not exist %USERPROFILE%\\Desktop\\WorkSandbox\\intel mkdir %USERPROFILE%\\Desktop\\WorkSandbox\\intel",
-            "if not exist %USERPROFILE%\\Desktop\\WorkSandbox\\ir mkdir %USERPROFILE%\\Desktop\\WorkSandbox\\ir",
-            "if not exist %USERPROFILE%\\Desktop\\WorkSandbox\\tickets mkdir %USERPROFILE%\\Desktop\\WorkSandbox\\tickets",
-            "if not exist %USERPROFILE%\\Desktop\\WorkSandbox\\playbooks mkdir %USERPROFILE%\\Desktop\\WorkSandbox\\playbooks",
-            "if not exist %USERPROFILE%\\Desktop\\WorkSandbox\\archive mkdir %USERPROFILE%\\Desktop\\WorkSandbox\\archive",
-            "if not exist \"%USERPROFILE%\\Desktop\\WorkSandbox\\intel\\baseline_note.txt\" echo SOC baseline checklist created %date% %time% > \"%USERPROFILE%\\Desktop\\WorkSandbox\\intel\\baseline_note.txt\""
+            "if not exist %USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios mkdir %USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios",
+            "if not exist %USERPROFILE%\\Desktop\\OperationsProjects\\IR-Case-Files mkdir %USERPROFILE%\\Desktop\\OperationsProjects\\IR-Case-Files",
+            "if not exist %USERPROFILE%\\Desktop\\OperationsProjects\\Intel-Briefs mkdir %USERPROFILE%\\Desktop\\OperationsProjects\\Intel-Briefs",
+            "if not exist %USERPROFILE%\\Desktop\\OperationsProjects\\Audit-Prep mkdir %USERPROFILE%\\Desktop\\OperationsProjects\\Audit-Prep",
+            "if not exist %USERPROFILE%\\Desktop\\OperationsProjects\\Archive mkdir %USERPROFILE%\\Desktop\\OperationsProjects\\Archive",
+            "if not exist \"%USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios\\project_plan.txt\" echo Project Helios kickoff notes created %date% %time% > \"%USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios\\project_plan.txt\""
           ],
           "DelayAfter": 3000,
           "DelayBefore": 0
@@ -96,24 +131,21 @@
         {
           "Command": "random",
           "CommandArgs": [
-            "dir %USERPROFILE%\\Desktop\\WorkSandbox",
-            "dir %USERPROFILE%\\Desktop\\WorkSandbox\\intel",
-            "dir %USERPROFILE%\\Desktop\\WorkSandbox\\ir",
-            "dir %USERPROFILE%\\Desktop\\WorkSandbox\\tickets",
-            "dir %USERPROFILE%\\Desktop\\WorkSandbox\\playbooks",
-            "dir %USERPROFILE%\\Desktop\\WorkSandbox\\archive",
-            "(echo SOC Daily Brief %date% %time%&echo Top Alert: Failed VPN bursts from external network&echo Priority Host: WS-12 suspicious parent child process chain&echo Action: Validate MFA logs and confirm firewall blocks) > \"%USERPROFILE%\\Desktop\\WorkSandbox\\intel\\soc_daily_brief_%RANDOM%.txt\"",
-            "(echo Incident Ticket IR-%RANDOM%&echo Severity: High&echo Detection: Encoded PowerShell observed by EDR&echo Scope: 1 endpoint and 2 user accounts&echo Next Step: Isolate endpoint and collect triage bundle) > \"%USERPROFILE%\\Desktop\\WorkSandbox\\tickets\\ir_ticket_%RANDOM%.txt\"",
-            "(echo IOC Watchlist Updated %date% %time%&echo IP: 185.199.108.153&echo Domain: update-security-check[.]com&echo Hash: 8f14e45fceea167a5a36dedd4bea2543&echo Source: Internal threat intel feed) > \"%USERPROFILE%\\Desktop\\WorkSandbox\\intel\\ioc_watch_%RANDOM%.txt\"",
-            "(echo SIEM Query Notes %date%&echo Query: EventID 4625 and LogonType 3 or 10&echo Objective: Find brute force and password spray patterns&echo Result: 27 failed attempts from 10.20.15.44) > \"%USERPROFILE%\\Desktop\\WorkSandbox\\ir\\siem_query_notes_%RANDOM%.txt\"",
-            "(echo Playbook Checklist - Ransomware Triage&echo 1. Confirm endpoint isolation&echo 2. Disable impacted credentials&echo 3. Capture volatile evidence&echo 4. Notify IR lead and SOC manager) > \"%USERPROFILE%\\Desktop\\WorkSandbox\\playbooks\\ransomware_triage_%RANDOM%.txt\"",
-            "(echo Vulnerability Review %date%&echo Asset: APP-SRV-03&echo Finding: CVE-2024-3400 patch missing&echo Risk: External access path present&echo Owner: Infra Ops Team) > \"%USERPROFILE%\\Desktop\\WorkSandbox\\tickets\\vuln_review_%RANDOM%.txt\"",
-            "(echo Firewall Change Record %date% %time%&echo Rule: Block outbound TCP 4444&echo Reason: Suspected C2 beacon traffic&echo Requested By: SOC-L2) > \"%USERPROFILE%\\Desktop\\WorkSandbox\\ir\\firewall_change_%RANDOM%.txt\"",
-            "xcopy /Y /I \"%USERPROFILE%\\Desktop\\WorkSandbox\\intel\\*.txt\" \"%USERPROFILE%\\Desktop\\WorkSandbox\\archive\\\"",
-            "copy /Y \"%USERPROFILE%\\Desktop\\WorkSandbox\\tickets\\*.txt\" \"%USERPROFILE%\\Desktop\\WorkSandbox\\archive\\\"",
-            "copy /Y \"%USERPROFILE%\\Desktop\\WorkSandbox\\ir\\*.txt\" \"%USERPROFILE%\\Desktop\\WorkSandbox\\archive\\\"",
-            "echo Activity log entry %date% %time% >> \"%USERPROFILE%\\Desktop\\WorkSandbox\\activity.log\"",
-            "forfiles /P \"%USERPROFILE%\\Desktop\\WorkSandbox\\archive\" /M *.txt /D -2 /C \"cmd /c del /q @path\""
+            "dir %USERPROFILE%\\Desktop\\OperationsProjects",
+            "dir %USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios",
+            "dir %USERPROFILE%\\Desktop\\OperationsProjects\\Intel-Briefs",
+            "dir %USERPROFILE%\\Desktop\\OperationsProjects\\IR-Case-Files",
+            "dir %USERPROFILE%\\Desktop\\OperationsProjects\\Audit-Prep",
+            "dir %USERPROFILE%\\Desktop\\OperationsProjects\\Archive",
+            "(echo Project Helios daily standup %date% %time%&echo Milestone: data connector validation&echo Owner: Platform Engineering) > \"%USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios\\standup_%RANDOM%.txt\"",
+            "(echo Threat brief update %date% %time%&echo Topic: suspicious authentication patterns&echo Action: review SIEM alerts and ticket anomalies) > \"%USERPROFILE%\\Desktop\\OperationsProjects\\Intel-Briefs\\brief_%RANDOM%.txt\"",
+            "(echo IR Case IR-%RANDOM%&echo Status: triage in progress&echo Task: collect EDR timeline and DNS history) > \"%USERPROFILE%\\Desktop\\OperationsProjects\\IR-Case-Files\\case_%RANDOM%.txt\"",
+            "(echo Audit prep checklist %date%&echo 1. verify access reviews&echo 2. export evidence&echo 3. update owner mappings) > \"%USERPROFILE%\\Desktop\\OperationsProjects\\Audit-Prep\\audit_%RANDOM%.txt\"",
+            "xcopy /Y /I \"%USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios\\*.txt\" \"%USERPROFILE%\\Desktop\\OperationsProjects\\Archive\\\"",
+            "copy /Y \"%USERPROFILE%\\Desktop\\OperationsProjects\\IR-Case-Files\\*.txt\" \"%USERPROFILE%\\Desktop\\OperationsProjects\\Archive\\\"",
+            "echo Activity log entry %date% %time% >> \"%USERPROFILE%\\Desktop\\OperationsProjects\\activity.log\"",
+            "(echo temporary cache %date% %time% > \"%USERPROFILE%\\Desktop\\OperationsProjects\\IR-Case-Files\\temp_%RANDOM%.tmp\") && del /q \"%USERPROFILE%\\Desktop\\OperationsProjects\\IR-Case-Files\\temp_*.tmp\"",
+            "forfiles /P \"%USERPROFILE%\\Desktop\\OperationsProjects\\Archive\" /M *.txt /D -1 /C \"cmd /c del /q @path\""
           ],
           "DelayAfter": { "random": true, "min": 35000, "max": 120000 },
           "DelayBefore": 5000
@@ -129,12 +161,12 @@
       "UtcTimeOff": "00:00:00",
       "HandlerArgs": {
         "execution-probability": 80,
-        "creation-probability": 0,
-        "modification-probability": 0,
-        "view-probability": 100,
-        "deletion-probability": 0,
-        "input-directory": "%USERPROFILE%\\Desktop\\WorkSandbox\\intel",
-        "output-directory": "%USERPROFILE%\\Desktop\\WorkSandbox\\intel",
+        "creation-probability": 40,
+        "modification-probability": 25,
+        "view-probability": 20,
+        "deletion-probability": 15,
+        "input-directory": "%USERPROFILE%\\Desktop\\OperationsProjects\\Intel-Briefs",
+        "output-directory": "%USERPROFILE%\\Desktop\\OperationsProjects\\Intel-Briefs",
         "text-generation": "random",
         "min-paragraphs": 2,
         "max-paragraphs": 8,
@@ -143,7 +175,7 @@
       "Loop": true,
       "TimeLineEvents": [
         {
-          "Command": "noop",
+          "Command": "random",
           "CommandArgs": [],
           "DelayAfter": { "random": true, "min": 60000, "max": 180000 },
           "DelayBefore": 45000
