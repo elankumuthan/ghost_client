@@ -21,12 +21,12 @@
 					"w.sara@cybergridpower.com",
 					"m.jennifer@cybergridpower.com"
 				],
-				"outlook-delete-probability": 15,
-				"outlook-read-probability": 45,
-				"outlook-reply-probability": 20,
-				"outlook-create-probability": 20,
-				"outlook-attachment-probability": 40,
-				"outlook-save-attachment-probability": 40,
+				"outlook-delete-probability": 2,
+				"outlook-read-probability": 65,
+				"outlook-reply-probability": 18,
+				"outlook-create-probability": 8,
+				"outlook-attachment-probability": 12,
+				"outlook-save-attachment-probability": 15,
 				"outlook-min-attachments": 0,
 				"outlook-max-attachments": 2,
 				"outlook-max-attachments-size": 10,
@@ -49,8 +49,16 @@
 						"PlainText",
 						""
 					],
-					"DelayAfter": 10000,
-					"DelayBefore": 0
+					"DelayAfter": {
+						"random": true,
+						"min": 300000,
+						"max": 1200000
+					},
+					"DelayBefore": {
+						"random": true,
+						"min": 60000,
+						"max": 240000
+					}
 				}
 			],
 			"ScheduleType": "Other"
@@ -62,13 +70,13 @@
 			"UtcTimeOff": "00:00:00",
 			"HandlerArgs": {
 				"isheadless": "false",
-				"delay-jitter": 30,
+				"delay-jitter": 25,
 				"stickiness": 60,
 				"stickiness-depth-min": 1,
 				"stickiness-depth-max": 5,
 				"visited-remember": 10,
-				"browse-probability": 100,
-				"actions-before-restart": 120,
+				"browse-probability": 72,
+				"actions-before-restart": 180,
 				"accept-insecure-certificates": "true",
 				"command-line-args": [
 					"--ignore-certificate-errors"
@@ -86,10 +94,14 @@
 					],
 					"DelayAfter": {
 						"random": true,
-						"min": 30000,
-						"max": 90000
+						"min": 90000,
+						"max": 360000
 					},
-					"DelayBefore": 15000
+					"DelayBefore": {
+						"random": true,
+						"min": 20000,
+						"max": 90000
+					}
 				}
 			],
 			"ScheduleType": "Other"
@@ -100,8 +112,8 @@
 			"UtcTimeOn": "00:00:00",
 			"UtcTimeOff": "00:00:00",
 			"HandlerArgs": {
-				"execution-probability": 72,
-				"delay-jitter": 40
+				"execution-probability": 28,
+				"delay-jitter": 25
 			},
 			"Loop": true,
 			"TimeLineEvents": [
@@ -117,7 +129,11 @@
 						"if not exist %USERPROFILE%\\Desktop\\OperationsProjects\\Downloads-Staging mkdir %USERPROFILE%\\Desktop\\OperationsProjects\\Downloads-Staging",
 						"if not exist \"%USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios\\project_plan.txt\" echo Project Helios kickoff notes created %date% %time% > \"%USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios\\project_plan.txt\""
 					],
-					"DelayAfter": 3000,
+					"DelayAfter": {
+						"random": true,
+						"min": 120000,
+						"max": 420000
+					},
 					"DelayBefore": 0
 				},
 				{
@@ -142,10 +158,14 @@
 					],
 					"DelayAfter": {
 						"random": true,
-						"min": 20000,
-						"max": 60000
+						"min": 240000,
+						"max": 900000
 					},
-					"DelayBefore": 2000
+					"DelayBefore": {
+						"random": true,
+						"min": 10000,
+						"max": 60000
+					}
 				},
 				{
 					"Command": "random",
@@ -159,10 +179,14 @@
 					],
 					"DelayAfter": {
 						"random": true,
-						"min": 25000,
-						"max": 75000
+						"min": 300000,
+						"max": 1200000
 					},
-					"DelayBefore": 3000
+					"DelayBefore": {
+						"random": true,
+						"min": 10000,
+						"max": 90000
+					}
 				}
 			],
 			"ScheduleType": "Other"
@@ -173,17 +197,17 @@
 			"UtcTimeOn": "00:00:00",
 			"UtcTimeOff": "00:00:00",
 			"HandlerArgs": {
-				"execution-probability": 75,
+				"execution-probability": 32,
 				"creation-probability": 0,
-				"modification-probability": 48,
-				"view-probability": 50,
+				"modification-probability": 35,
+				"view-probability": 62,
 				"deletion-probability": 2,
 				"input-directory": "%USERPROFILE%\\Desktop\\OperationsProjects\\Intel-Briefs",
 				"output-directory": "%USERPROFILE%\\Desktop\\OperationsProjects\\Intel-Briefs",
 				"text-generation": "random",
 				"min-paragraphs": 1,
 				"max-paragraphs": 5,
-				"delay-jitter": 30
+				"delay-jitter": 20
 			},
 			"Loop": true,
 			"TimeLineEvents": [
@@ -192,10 +216,14 @@
 					"CommandArgs": [],
 					"DelayAfter": {
 						"random": true,
-						"min": 30000,
-						"max": 90000
+						"min": 300000,
+						"max": 1200000
 					},
-					"DelayBefore": 10000
+					"DelayBefore": {
+						"random": true,
+						"min": 10000,
+						"max": 60000
+					}
 				}
 			],
 			"ScheduleType": "Other"
@@ -206,17 +234,17 @@
 			"UtcTimeOn": "00:00:00",
 			"UtcTimeOff": "00:00:00",
 			"HandlerArgs": {
-				"execution-probability": 68,
+				"execution-probability": 30,
 				"creation-probability": 0,
-				"modification-probability": 53,
-				"view-probability": 46,
+				"modification-probability": 40,
+				"view-probability": 58,
 				"deletion-probability": 1,
 				"input-directory": "%USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios",
 				"output-directory": "%USERPROFILE%\\Desktop\\OperationsProjects\\Project-Helios",
 				"text-generation": "random",
 				"min-paragraphs": 1,
 				"max-paragraphs": 4,
-				"delay-jitter": 35
+				"delay-jitter": 20
 			},
 			"Loop": true,
 			"TimeLineEvents": [
@@ -225,10 +253,14 @@
 					"CommandArgs": [],
 					"DelayAfter": {
 						"random": true,
-						"min": 30000,
-						"max": 90000
+						"min": 360000,
+						"max": 1500000
 					},
-					"DelayBefore": 8000
+					"DelayBefore": {
+						"random": true,
+						"min": 10000,
+						"max": 60000
+					}
 				}
 			],
 			"ScheduleType": "Other"
